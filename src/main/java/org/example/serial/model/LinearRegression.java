@@ -1,10 +1,10 @@
-package org.example.model;
+package org.example.serial.model;
 
-import org.example.data.DataSet;
+import org.example.serial.data.DataSet;
 public class LinearRegression {
     private double k; // gradient
     private double b; // y-intercept
-    private double learningRate = 0.01;
+    private double learningRate = 0.001;
     private int epochs = 1000;
 
     public LinearRegression() {

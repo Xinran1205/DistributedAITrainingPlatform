@@ -1,4 +1,4 @@
-package org.example.utils;
+package org.example.serial.utils;
 
 import java.util.Scanner;
 

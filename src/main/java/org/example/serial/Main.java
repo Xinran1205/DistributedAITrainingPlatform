@@ -1,10 +1,10 @@
-package org.example;
+package org.example.serial;
 
 
-import org.example.utils.InputHandler;
-import org.example.utils.DataParser;
-import org.example.data.DataSet;
-import org.example.model.LinearRegression;
+import org.example.serial.data.DataSet;
+import org.example.serial.model.LinearRegression;
+import org.example.serial.utils.InputHandler;
+import org.example.serial.utils.DataParser;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,6 +29,10 @@ public class Main {
             case 2:
                 // Read from file
                 String filePath = InputHandler.getFilePath("Please enter the path of the training data file (e.g., data.txt):");
+
+                // 这里打印了main函数的当前工作目录看了一下，很神奇，是在DistributedAITrainingPlatform这个目录下
+                // 所以我把data.txt也放到了DistributedAITrainingPlatform这个目录下
+                //System.out.println("Current working directory: " + System.getProperty("user.dir"));
                 DataSet dataSetFromFile = DataParser.parseFromFile(filePath);
                 if (dataSetFromFile == null) {
                     System.out.println("File reading failed or file format is incorrect!");

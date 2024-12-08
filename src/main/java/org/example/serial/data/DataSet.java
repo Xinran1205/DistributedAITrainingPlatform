@@ -1,4 +1,4 @@
-package org.example.data;
+package org.example.serial.data;
 
 public class DataSet {
     private double[] x;
