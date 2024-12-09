@@ -14,7 +14,7 @@ import org.example.distributed.messages.ParameterMessage;
 public class ParameterServer {
     private double k = 0.0;
     private double b = 0.0;
-    private double learningRate = 0.01;
+    private double learningRate = 0.05;
     private int port;
     private int numWorkers;
     private volatile boolean running = true;
@@ -70,6 +70,7 @@ public class ParameterServer {
                 }
             }
             System.out.println("Training completed!");
+            System.out.println("Final parameters: k = " + k + ", b = " + b);
 
             // 训练结束后，广播最终参数（可选）
             broadcastParameters(handlers);
