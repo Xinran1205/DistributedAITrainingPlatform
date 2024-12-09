@@ -98,6 +98,7 @@ worker 1：
 java -cp target/DistributedAITrainingPlatform-1.0-SNAPSHOT.jar org.example.distributed.DistributedTrainingDriver --role worker --serverHost localhost --serverPort 9999 --workerIndex 1 --numWorkers 5 --dataPath data.txt
 ```
 When the parameter server detects that all specified Workers are connected, the training loop begins, continuously sending parameters to each Worker. Workers compute gradients based on their local data and send them back to the parameter server for parameter updates.
+
 5. **Viewing Results**  
    After training completes, you can view the trained parameters k and b at the parameter server.
 
