@@ -66,7 +66,6 @@ The current implementation supports only one-dimensional linear regression (i.e.
     3,6
     4,8
    ```
-所有数据将用于串行或分布式训练。
 
 All data will be used for either serial or distributed training.
 
